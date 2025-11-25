@@ -9,7 +9,6 @@ export class Team {
   @Column()
   name: string;
 
-  // List of user IDs (string format)
   @Column()
   members: string[];
 }

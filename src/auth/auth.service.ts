@@ -12,16 +12,12 @@ export class AuthService {
 
   async signIn(email: string, password: string) {
     const user = await this.usersService.findByEmail(email);
-    console.log("user:",user)
 
     if (!user) {
       throw new UnauthorizedException('User not found');
     }
 
-    console.log("password:",password)
-    console.log(user.password)
     const isMatch = await bcrypt.compare(password, user.password);
-    console.log("isMatch:",isMatch)
 
     if (!isMatch) {
       throw new UnauthorizedException('Invalid credentials');

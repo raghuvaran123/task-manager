@@ -14,7 +14,7 @@ import { AssignTaskDto } from './dto/assign-task.dto';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('tasks')
-@UseGuards(JwtAuthGuard) // ALL TASK ROUTES PROTECTED
+@UseGuards(JwtAuthGuard)
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 

@@ -12,8 +12,8 @@ export class Task {
   due_date: Date;
 
   @Column()
-  status: string; // pending | in-progress | completed
+  status: string;
 
   @Column({ nullable: true })
-  assignee: string | null; // stores user_id string
+  assignee: string | null;
 }

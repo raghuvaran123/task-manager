@@ -1,4 +1,3 @@
-// src/users/users.service.ts
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MongoRepository } from 'typeorm';
@@ -45,7 +44,6 @@ async create(dto: CreateUserDto) {
   }
 
   findByEmail(email: string) {
-    console.log("email:",email)
     return this.userRepo.findOneBy({ email });
   }
 

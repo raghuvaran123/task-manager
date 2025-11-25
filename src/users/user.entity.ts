@@ -1,4 +1,3 @@
-// src/users/user.entity.ts
 import { Entity, Column, ObjectIdColumn } from 'typeorm';
 import { ObjectId } from 'mongodb';
 
@@ -17,8 +16,8 @@ export class User {
   password: string;
 
   @Column({ nullable: true })
-  teamId?: string; // can store team _id as string
+  teamId?: string;
 
   @Column({ default: 'member' })
-  role: string; // 'member' | 'admin' etc.
+  role: string;
 }
