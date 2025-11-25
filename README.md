@@ -79,6 +79,44 @@ MONGO_URI=<your-mongo-db-url>
 JWT_SECRET=<your-secret>
 PORT=3000
 
+:
+
+📬 Postman Collection
+
+A complete Postman collection is included in this project to help you easily test all API endpoints such as Auth, Users, Teams, and Tasks.
+
+You can find it here:
+postman/task-manager.postman_collection.json
+
+This collection includes:
+
+-Login to get JWT token
+
+-Create/Fetch/Delete Users
+
+-Create Teams & Add Members
+
+-Create Tasks, Update Tasks, Assign Tasks
+
+-Fetch Tasks with Assignee details
+
+To use it:
+
+1.Open Postman
+
+2.Click Import
+
+3.Select the file from the postman folder
+
+4.Set the environment variable:
+
+    baseUrl = http://localhost:3000
+
+    token = <your JWT token>
+
+This will allow you to test all routes quickly, including fetching tasks, creating teams, and assigning users to tasks.
+
+
 
 ## License
 
