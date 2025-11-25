@@ -1,0 +1,1311 @@
+{
+	"info": {
+		"_postman_id": "47e28a91-0b27-46e7-8a14-76e8823af7c2",
+		"name": "NestJS Task Manager API - Full Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28485205"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"email@****.com\",\n  \"password\": \"**********\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"email@*****.com\",\n  \"password\": \"*******\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "250"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fa-34aieAuKuPutBX1sVpSVefmx+WQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:35:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"User Eight\",\n  \"email\": \"user8@gmail.com\",\n  \"password\": \"****hidden****\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer "
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"User Six\",\n  \"email\": \"user6@gmail.com\",\n  \"password\": \"***hidden****\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-nzVG1SmsA3bVXMNi5Qagqab04vM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Nov 2025 04:18:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6923dca814aa374397074989\",\n    \"name\": \"User Six\",\n    \"email\": \"user6@gmail.com\",\n    \"password\": \"****hidden****\",\n    \"teamId\": null,\n    \"role\": \"member\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer "
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1524"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f4-3Gj/b5Pd/Db70xXhWfWHVxg0Jek\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Nov 2025 04:19:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"\",\n        \"name\": \"Admin\",\n        \"email\": \"test1@gmail.com\",\n        \"password\": \"****hidden******,\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923cd7980c206903bd6275e\",\n        \"name\": \"Raghu\",\n        \"email\": \"raghu@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923cd8280c206903bd6275f\",\n        \"name\": \"Naveen\",\n        \"email\": \"****hidden******\",\n        \"password\": \"\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923cd8c80c206903bd62760\",\n        \"name\": \"sai\",\n        \"email\": \"sai@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923ce1080c206903bd62761\",\n        \"name\": \"Barath\",\n        \"email\": \"barath@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923d6ec14aa374397074982\",\n        \"name\": \"priya\",\n        \"email\": \"priya@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923dc6814aa374397074983\",\n        \"name\": \"User One\",\n        \"email\": \"user1@example.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923dc7a14aa374397074984\",\n        \"name\": \"User Two\",\n        \"email\": \"user2@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923dc8514aa374397074985\",\n        \"name\": \"User Three\",\n        \"email\": \"user3@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923dc8d14aa374397074986\",\n        \"name\": \"User Four\",\n        \"email\": \"user4@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923dc9a14aa374397074988\",\n        \"name\": \"User Five\",\n        \"email\": \"user5@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    },\n    {\n        \"id\": \"6923dca814aa374397074989\",\n        \"name\": \"User Six\",\n        \"email\": \"user6@gmail.com\",\n        \"password\": \"****hidden******\",\n        \"teamId\": null,\n        \"role\": \"member\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-8iBP9oIqI4g7bdsEanwbREn3q4E\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 06:11:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": \"id\",\n    \"name\": \"User One\",\n    \"email\": \"user1@gmail.com\",\n    \"password\": \"****hidden*****\",\n    \"teamId\": null,\n    \"role\": \"member\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:23:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Create Team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"QA Team\",\n  \"members\": [\"692541b3bb279f34682c42e9\",\"692542ac142c242336ce9fcc\"]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/team",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Frontend Team\",\n  \"members\": [\"692541a1bb279f34682c42e7\",\"692541a9bb279f34682c42e8\"]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7a-O9aNY9DChwLHJX34ARrsSjsDovg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:48:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": \"\",\n    \"name\": \"Frontend Team\",\n    \"members\": [\n        \"692541a1bb279f34682c42e7\",\n        \"692541a9bb279f34682c42e8\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teamId\": \"id\",\n  \"userId\": \"id\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/team/add-member",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team",
+								"add-member"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Member",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teamId\": \"\",\n  \"userId\": \"\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/team/add-member",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team",
+										"add-member"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "148"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"94-ZYLTNAQG7kuyztISu6lHJZBAI/w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:51:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": \"id\",\n    \"name\": \"Backend Team\",\n    \"members\": [\n        \"id\",\n        \"id2\",\n        \"id3\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Teams",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/team",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Teams",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/team",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"team"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "390"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"186-dgvLm8vPG/38Zvcg5UjRZU7RB5A\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:52:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "[\n    {\n        \"id\": \"id\",\n        \"name\": \"Backend Team\",\n        \"members\": [\n            \"id\",\n            \"id1\",\n            \"id2\"\n        ]\n    },\n    {\n        \"id\": \"\",\n        \"name\": \"Frontend Team\",\n        \"members\": [\n            \"id\",\n            \"id\"\n        ]\n    },\n    {\n        \"id\": \"id\",\n        \"name\": \"QA Team\",\n        \"members\": [\n            \"id\",\n            \"id\"\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"Test Dev\",\n  \"due_date\": \"2025-12-04\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"Build Login\",\n  \"due_date\": \"2025-11-30\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "121"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"79-6zQarByb5gnDaETFaTKY/JFK1f8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:57:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"_id\": \"id\",\n    \"description\": \"Build Login\",\n    \"due_date\": \"2025-11-30\",\n    \"status\": \"pending\",\n    \"assignee\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"assignee\": \"id\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Task",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"assignee\": \"id\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-KcWpaSE7hdfoh/i88ZzXdE7Pm2Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 06:04:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"_id\": \"id\",\n    \"description\": \"Build Login\",\n    \"due_date\": \"2025-11-30\",\n    \"status\": \"pending\",\n    \"assignee\": \"id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Assign Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"task_id\": \"id\",\n  \"user_id\": \"id\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tasks/assign",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks",
+								"assign"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"task_id\": \"id\",\n  \"user_id\": \"id\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/tasks/assign",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks",
+										"assign"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-2geZamI9rgMBoab/Us+TLFBmQIU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 06:06:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"_id\": \"id\",\n    \"description\": \"Prepare Demo\",\n    \"due_date\": \"2025-12-02\",\n    \"status\": \"pending\",\n    \"assignee\": \"id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tasks",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/tasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "365"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16d-ERsZoGwtpeeOxqwmeCavpCHfqyY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 05:58:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "[\n    {\n        \"_id\": \"****\",\n        \"description\": \"Build Login\",\n        \"due_date\": \"2025-11-30\",\n        \"status\": \"pending\",\n        \"assignee\": null\n    },\n    {\n        \"_id\": \"*****\",\n        \"description\": \"Prepare Demo\",\n        \"due_date\": \"2025-12-02\",\n        \"status\": \"pending\",\n        \"assignee\": null\n    },\n    {\n        \"_id\": \"*****\",\n        \"description\": \"Test Dev\",\n        \"due_date\": \"2025-12-04\",\n        \"status\": \"pending\",\n        \"assignee\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Tasks With Assignee Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/with-assignee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"with-assignee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tasks With Assignee Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/tasks/with-assignee",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tasks",
+										"with-assignee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "623"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26f-ZgFQYs0m1d5RQhK43NTNWSdok+Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Nov 2025 06:08:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "[\n    {\n        \"id\": \"****\",\n        \"description\": \"Build Login\",\n        \"due_date\": \"2025-11-30\",\n        \"status\": \"pending\",\n        \"assignee\": \"*****\",\n        \"assigneeDetails\": {\n            \"id\": \"****\",\n            \"name\": \"User One\",\n            \"email\": \"user1@gmail.com\"\n        }\n    },\n    {\n        \"id\": \"*****\",\n        \"description\": \"Prepare Demo\",\n        \"due_date\": \"2025-12-02\",\n        \"status\": \"pending\",\n        \"assignee\": \"*****\",\n        \"assigneeDetails\": {\n            \"id\": \"*****\",\n            \"name\": \"User Three\",\n            \"email\": \"user3@gmail.com\"\n        }\n    },\n    {\n        \"id\": \"****\",\n        \"description\": \"Test Dev\",\n        \"due_date\": \"2025-12-04\",\n        \"status\": \"pending\",\n        \"assignee\": null,\n        \"assigneeDetails\": null\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "baseUrl",
+			"value": ""
+		}
+	]
+}
